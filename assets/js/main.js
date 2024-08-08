@@ -172,7 +172,7 @@ colorPic.addEventListener('input', () => {
   frontside.style.backgroundColor = selectedColor;
   customCard.style.backgroundColor = selectedColor;
 })
-// store the fontcolor 
+// store the font
 var fontColor = document.querySelectorAll(".font-color");
 var fontColorPic = document.querySelector(".custom-font-color");
 var fontColorOvarlay = document.querySelector(".custom-font-color-container-overlay");
@@ -194,7 +194,47 @@ document.addEventListener("input", () => {
     
   }
 })
+// person name
+var NameGet = document.querySelector(".peson-name");
+var NameShow = document.querySelector(".person-name-element");
+ NameGet.addEventListener("input", () => {
+  var updateValue = NameGet.value;
+  NameShow.innerHTML = updateValue;
+  if(updateValue ==="") {
+    NameShow.innerHTML ="you name";
+  }
+  else{
+    NameShow.innerHTML = updateValue;
+  }
+ })
+//  compan name 
+var companyName = document.querySelector(".companyName");
+var compnayShow = document.querySelector(".compnay-name");
+companyName.addEventListener("input", () => {
+  var updateValue = companyName.value;
+  compnayShow.innerHTML = updateValue;
+  if(updateValue ==="") {
+  compnayShow.innerHTML ="company name";
+  }
+  else{
+  compnayShow.innerHTML = updateValue;
+  }
+})
+//  logo 
+ var logo = document.querySelector(".Logo");
+ var showImg = document.querySelector(".showimg");
 
-
-
-
+ logo.addEventListener("change", () => {
+     if (logo.files.length > 0) {
+         var file = logo.files[0];
+         var reader = new FileReader();
+         reader.onload = (event) => {
+             showImg.src = event.target.result;
+             showImg.style.display = "block"; // Make sure the img is visible
+         };
+         
+         reader.readAsDataURL(file);
+     } else {
+         console.log("No files selected.");
+     }
+ });
