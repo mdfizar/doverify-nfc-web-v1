@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Splide Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <style>
+        .splide__track {
+          width: 300px;
+          height: 400px;
+          overflow: hidden;
+          background: red;
+        }
+        .splide__list {
+            display: flex;
+            flex-direction: column; /* Stack slides vertically */
+        }
+        .splide__slide {
+          height: 2000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .splide__arrows--ttb,
+         .splide__arrow--next {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    
+<div style="max-width: 500px; margin: auto;">
+    <section class="splide" aria-label="Vertical Splide Example">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum reprehenderit quaerat laboriosam nisi nulla nam unde. Accusamus, veritatis dicta inventore doloribus molestias ut vitae officiis maiores dolore! Obcaecati, tenetur quaerat.
+                    Ipsam explicabo molestias impedit temporibus consectetur quo culpa quis dolores nobis voluptatibus corrupti quibusdam tempore velit cupiditate ex consequatur, exercitationem dignissimos. Nostrum, veniam corporis earum provident voluptatum doloremque sint aperiam!
+                    Voluptatibus delectus voluptatem quo corrupti voluptates non veritatis, adipisci blanditiis harum consectetur quasi laborum qui quibusdam dicta inventore quis nesciunt beatae et placeat? Perferendis vitae, fugiat enim minus sunt dolorum.
+                    Neque eius sunt quas corrupti ad quasi ea officia maiores voluptas explicabo, qui, impedit blanditiis nisi beatae ipsum exercitationem reprehenderit iusto corporis commodi. Eveniet perferendis dolorum sit repellendus placeat ratione?
+                    Doloribus voluptatem numquam libero magnam maxime delectus tempora! Ex laboriosam facilis quaerat mollitia nemo quasi, officia quis totam enim assumenda ea quae exercitationem. Aspernatur tempora a nam iste totam at.
+                    Culpa dolore ea illo suscipit, modi rem possimus nesciunt tenetur autem? Dignissimos eligendi odio explicabo neque repudiandae fugiat maiores suscipit vel, ad velit vitae, iste, officia obcaecati natus fuga mollitia.
+                    Voluptatem magni excepturi aspernatur aliquam ratione nobis at officiis quasi autem sapiente, animi molestiae aut cum iure expedita cupiditate vel modi necessitatibus quo. Aut, eius deleniti dolorem labore veritatis in.
+                    Ea dolore similique temporibus exercitationem officiis nulla, quas dolorum minus culpa animi maxime a ad atque quis rem ducimus, consequatur labore fuga necessitatibus non sequi, quasi cupiditate dignissimos? Pariatur, et.
+                    Iure omnis quaerat officia totam? Beatae maiores labore natus consequatur architecto corporis sit facere dicta iure quaerat, atque soluta magnam adipisci distinctio. Ipsa ab eum iste nihil, dolorem assumenda vel.
+                    Consectetur commodi adipisci iure maiores iste alias sed natus laudantium itaque labore error atque eaque ullam impedit est ea iusto rerum minima, quidem harum. Quod facilis quia recusandae commodi neque.
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const splide = new Splide('.splide', {
+            type: 'loop',
+            height: 'fit-content',
+            perPage: 1,
+            focus  : 'center',
+            direction: 'ttb', 
+            autoScroll: {
+                speed: 1,
+            },
+        });
+
+        splide.mount(window.splide.Extensions);
+    });
+</script>
+
+</body>
+</html>

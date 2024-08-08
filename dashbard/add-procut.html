@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product</title>
+  <!-- === custom css ========= -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/addprocuct.css">
+</head>
+<body>
+  <!-- ======== dashboard navigation ========== -->
+  <div class="dashboard-left d-none d-xl-block">
+    <div class="dashboard-head">
+      <a href="dashboard.html" class="nav-link doverify-logo my-3 pb-3 d-none d-xl-block">
+        <img src="assets/img/logo.png" alt="doverify logo">
+      </a>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+             <span class="dashboard-icon"><i class="fa-solid fa-border-all"></i></span><span>Dashboard</span>
+             <!-- <span class="arrow"><i class="fa-solid fa-angle-up"></i></span> -->
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <li><a href="#">E-comarce</a></li>
+              <li><a href="#">Customer List</a></li>
+            </div>
+          </div>
+        </div>
+        <p class="title m-0">Product</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <span class="dashboard-icon"><i class="fa-brands fa-product-hunt"></i></span><span>Product</span>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <li><a href="#">Add product</a></li>
+              <li><a href="#">Manage product</a></li>
+              <li><a href="#">Add category</a></li>
+              <li><a href="#">Manage category</a></li>
+              <li><a href="#">Your procut</a></li>
+            </div>
+          </div>
+        </div>
+        <p class="title m-0">Pages</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+              <span class="dashboard-icon"><i class="fa-solid fa-user"></i></span><span>User Manegment</span>
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <li><a href="#">Profile Picture</a></li>
+              <li><a href="#">profile Name</a></li>
+              <li><a href="#">User Email</a></li>
+              <li><a href="#">Reset Passwoard</a></li>
+              <li><a href="#">Log out</a></li>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingSven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSven" aria-expanded="false" aria-controls="flush-collapseThree">
+              <span class="dashboard-icon"><i class="fa-solid fa-credit-card"></i></span><span>Invoice Processing Tool</span>
+            </button>
+          </h2>
+          <div id="flush-collapseSven" class="accordion-collapse collapse" aria-labelledby="flush-headingSven" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <li><a href="#">Profile Picture</a></li>
+              <li><a href="#">profile Name</a></li>
+              <li><a href="#">User Email</a></li>
+              <li><a href="#">Reset Passwoard</a></li>
+              <li><a href="#">Log out</a></li>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingEeight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEeight" aria-expanded="false" aria-controls="flush-collapseThree">
+              <span class="dashboard-icon"><i class="fa-solid fa-gear"></i></span><span>Setting</span>
+            </button>
+          </h2>
+          <div id="flush-collapseEeight" class="accordion-collapse collapse" aria-labelledby="flush-headingEeight" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <li><a href="#">Profile Picture</a></li>
+              <li><a href="#">profile Name</a></li>
+              <li><a href="#">User Email</a></li>
+              <li><a href="#">Reset Passwoard</a></li>
+              <li><a href="#">Log out</a></li>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingNine">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseThree">
+              <span class="dashboard-icon"><i class="fa-solid fa-gear"></i></span><span>Account</span>
+            </button>
+          </h2>
+          <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <li><a href="#">Profile Picture</a></li>
+              <li><a href="#">profile Name</a></li>
+              <li><a href="#">User Email</a></li>
+              <li><a href="#">Reset Passwoard</a></li>
+              <li><a href="#">Log out</a></li>
+            </div>
+          </div>
+        </div>
+        <p class="title m-0">App</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+             <span class="dashboard-icon"><i class="fa-solid fa-file"></i></span><span>Report</span>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <li><a href="#">Download Report</a></li>
+              <li><a href="#">Share Report</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============ dashboard ============ -->
+  <div class="dashboard px-4">
+     <!-- ======== top navitation ========== -->
+   <div class="header-top px-4 py-3">
+   <button class="menu-btn d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+    <i class="fa-solid fa-bars"></i>
+   </button>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="dashboard-left">
+        <div class="dashboard-head">
+          <a href="#" class="nav-link doverify-logo my-3 pb-3">
+            <img src="assets/img/logo.png" alt="doverify logo">
+          </a>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                 <span class="dashboard-icon"><i class="fa-solid fa-border-all"></i></span><span>Dashboard</span>
+                 <!-- <span class="arrow"><i class="fa-solid fa-angle-up"></i></span> -->
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <li><a href="#">E-comarce</a></li>
+                  <li><a href="#">Customer List</a></li>
+                </div>
+              </div>
+            </div>
+            <p class="title m-0">Product</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <span class="dashboard-icon"><i class="fa-brands fa-product-hunt"></i></span><span>Product</span>
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <li><a href="#">Add product</a></li>
+                  <li><a href="#">Manage product</a></li>
+                  <li><a href="#">Add category</a></li>
+                  <li><a href="#">Manage category</a></li>
+                  <li><a href="#">Your procut</a></li>
+                </div>
+              </div>
+            </div>
+            <p class="title m-0">Pages</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <span class="dashboard-icon"><i class="fa-solid fa-user"></i></span><span>User Manegment</span>
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <li><a href="#">Profile Picture</a></li>
+                  <li><a href="#">profile Name</a></li>
+                  <li><a href="#">User Email</a></li>
+                  <li><a href="#">Reset Passwoard</a></li>
+                  <li><a href="#">Log out</a></li>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSven" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <span class="dashboard-icon"><i class="fa-solid fa-credit-card"></i></span><span>Invoice Processing Tool</span>
+                </button>
+              </h2>
+              <div id="flush-collapseSven" class="accordion-collapse collapse" aria-labelledby="flush-headingSven" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <li><a href="#">Profile Picture</a></li>
+                  <li><a href="#">profile Name</a></li>
+                  <li><a href="#">User Email</a></li>
+                  <li><a href="#">Reset Passwoard</a></li>
+                  <li><a href="#">Log out</a></li>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingEeight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEeight" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <span class="dashboard-icon"><i class="fa-solid fa-gear"></i></span><span>Setting</span>
+                </button>
+              </h2>
+              <div id="flush-collapseEeight" class="accordion-collapse collapse" aria-labelledby="flush-headingEeight" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <li><a href="#">Profile Picture</a></li>
+                  <li><a href="#">profile Name</a></li>
+                  <li><a href="#">User Email</a></li>
+                  <li><a href="#">Reset Passwoard</a></li>
+                  <li><a href="#">Log out</a></li>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <span class="dashboard-icon"><i class="fa-solid fa-gear"></i></span><span>Account</span>
+                </button>
+              </h2>
+              <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <li><a href="#">Profile Picture</a></li>
+                  <li><a href="#">profile Name</a></li>
+                  <li><a href="#">User Email</a></li>
+                  <li><a href="#">Reset Passwoard</a></li>
+                  <li><a href="#">Log out</a></li>
+                </div>
+              </div>
+            </div>
+            <p class="title m-0">App</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                 <span class="dashboard-icon"><i class="fa-solid fa-file"></i></span><span>Report</span>
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <li><a href="#">Download Report</a></li>
+                  <li><a href="#">Share Report</a></li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== left ==== -->
+    <div class="d-none d-md-block">
+      <div class="d-flex gap-3">
+        <a href="#" class="nav-link">Dashboard</a>
+        <a href="#" class="nav-link">Page</a>
+        <a href="#" class="nav-link">Apps</a>
+        <a href="#" class="nav-link">Layouts</a>
+        <a href="#" class="nav-link">Help</a>
+      </div>
+    </div>
+    <!--====== right ==== -->
+    <div class="d-flex gap-3  head-top-iocn">
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button><i class="fa-solid fa-envelope-open-text"></i></button>
+      <button><i class="fa-solid fa-envelope-open-text"></i></button>
+      <button><i class="fa-solid fa-envelope-open-text"></i></button>
+      <button><i class="fa-solid fa-border-all"></i></button>
+      <button><i class="fa-regular fa-sun"></i></button>
+      <img class="profile-img" src="assets/img/card-one-back.png" alt="">
+    </div>
+</div>
+  <!-- ======= content ============ -->
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center my-3">
+        <div>
+          <p style="font-size: 1.35rem; color: #071437;"class="m-0  fw-bold">Product Form<p>
+        </div>
+        <div>
+          <button class="mange-sale-btn fw-medium">Filter</button>
+          <button class="add-product-btn fw-medium">Create</button>
+        </div>
+      </div>
+      <!-- ======== product form ====== -->
+      <form action="#">
+        <div class="row prodcut-form">
+          <!-- ===== col-1 ====== -->
+           <div class="col-12 col-lg-4">
+             <div class="thambnail-container">
+               <h4 class="m-0">Thumbnail</h4>
+               <div class="imgupload my-3">
+                 <i class="fa-regular fa-images"></i>
+                 <label class="img-include" for="thumbnail">
+                   <i class="fa-solid fa-pen"></i>
+                 </label>
+                 <input class="d-none" type="file" id="thumbnail">
+               </div>
+               <p class="m-0 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, non.</p>
+             </div>
+             <div class="status form-boxshadow mt-4">
+               <h4>Status</h4>
+               <select class="form-select" aria-label="Default select example">
+                 <option selected>published</option>
+                 <option value="1">One</option>
+                 <option value="2">Two</option>
+                 <option value="3">Three</option>
+               </select>
+               <p class="m-0">Set the product status.</p>
+             </div>
+             <div class="produc-details form-boxshadow mt-4">
+               <h4>Cetagory</h4>
+               <select class="form-select" aria-label="Default select example">
+                 <option selected>Select an option menu</option>
+                 <option value="1">One</option>
+                 <option value="2">Two</option>
+                 <option value="3">Three</option>
+               </select>
+               <p class="mb-2">Add product to a category.</p>
+               <button class="d-flex my-3 gap-3 border-0">
+                 <span>icon</span>
+                 <span>Create cetagory</span>
+               </button>
+               <label for="tags">Tags</label><br>
+               <input type="text" id="tags">
+             </div>
+             <div class="product-tepmplate mt-4 form-boxshadow">
+               <h4>Product Template</h4>
+               <label for="product-template"> Select a Product Template</label><br>
+               <select class="form-select" aria-label="Default select example " id="product-template">
+                 <option selected>Defualt</option>
+                 <option value="1">Electronics</option>
+                 <option value="2">Office seconudary</option>
+               </select>
+               <p class="m-0">Assign a template from your current theme to define how a single product is displayed.</p>
+             </div>
+           </div>
+           <!-- ======= col-2 ========= -->
+           <div class="col-12 col-lg-7 flex-grow-1">
+             <div class="form.container-left">
+               <span><a href="#">Genarel</a></span>
+               <span><a href="#">Advance</a></span>
+               <div class="mt-4 form-boxshadow">
+                 <h4>General</h4>
+                 <label for="productName">Product Name *</label><br>
+                 <input type="text">
+                 <p class="m-0">
+                   A product name is required and recommended to be unique.
+                 </p>
+                 <p class="mt-3">Description</p>
+                 <textarea placeholder="Type your text here"></textarea>
+                 <p class="m-0">Set a description to the product for better visibility.</p>
+               </div>
+               <div class="media mt-4 form-boxshadow">
+                 <h4>Media</h4>
+                 <input type="file">
+                 <p class="m-0">Set the product media gallery.</p>
+               </div>
+               <div class="product-pricing mt-4 form-boxshadow">
+                 <h4>Pricing</h4>
+                 <label for="product-price">Base Price *</label><br>
+                 <input type="text" id="product-price" placeholder="Product Price">
+                 <p class="m-0">Set the product price.</p>
+                 <div class="discunt-type my-4">
+                   <h4>Discount type <span>!</span></h4>
+                   <div class="d-flex">
+                     <div class="discount-radio">
+                       <input type="radio" id="option1" name="options" value="option1">
+                       <label for="option1">Option 1</label>
+                     </div>
+                     <div class="discount-radio">
+                       <input type="radio" id="option1" name="options" value="option1">
+                       <label for="option1">Option 1</label>
+                     </div>
+                     <div class="discount-radio">
+                       <input type="radio" id="option1" name="options" value="option1">
+                       <label for="option1">Option 1</label>
+                     </div>
+                   </div>
+                   <div class="tax my-3 d-flex justify-content-between">
+                     <div>
+                       <label for="tax">Tax</label><br>
+                       <select class="form-select" aria-label="Default select example">
+                         <option selected>Select an option</option>
+                         <option value="1">One</option>
+                         <option value="2">Two</option>
+                         <option value="3">Three</option>
+                       </select>
+                     </div>
+                     <div>
+                       <label for="vat">Vat Amount(%)</label><br>
+                       <input type="text" id="vat">
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="d-flex justify-content-end gap-2 mt-4">
+                 <button class="mange-sale-btn fw-medium">Cencle</button>
+                 <button class="add-product-btn fw-medium">Save Change</button>
+               </div>
+             </div>
+           </div>
+         </div>
+      </form>
+      <!-- ====== dashboard-footer ========= -->
+    <div class="dashboard-footer d-flex mt-5 py-5 px-3 justify-content-between align-items-center flex-column-reverse flex-md-row gap-3">
+      <p class="m-0">
+        © 2024 All Rights Reserved | <strong>Developed by doverify.net</strong>
+      </p>
+      <div class="d-flex gap-3">
+        <a class="nav-link" href="#">conact</a>
+        <a class="nav-link" href="#">about</a>
+        <a class="nav-link" href="#">product</a>
+      </div>
+    </div>
+    </div>
+  </div>
+
+   <span class="icon m-5">
+      fkfk
+   </span>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
