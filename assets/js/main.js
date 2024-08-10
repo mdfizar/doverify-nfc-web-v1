@@ -230,7 +230,7 @@ companyName.addEventListener("input", () => {
          var reader = new FileReader();
          reader.onload = (event) => {
              showImg.src = event.target.result;
-             showImg.style.display = "block"; // Make sure the img is visible
+             showImg.style.display = "block";
          };
          
          reader.readAsDataURL(file);
@@ -238,3 +238,66 @@ companyName.addEventListener("input", () => {
          console.log("No files selected.");
      }
  });
+//  theme selection
+  var themeOne = document.querySelector(".theme1");
+  var themeTwo = document.querySelector(".theme2")
+  var themeMenu = document.querySelector(".theme-menu");
+
+//  theme customize 
+var profileName = document.querySelector(".profile-name");
+var profileNameShow = document.querySelector(".profile-name-show");
+profileName.addEventListener("input", () => {
+  var updateText = profileName.value;
+  if(updateText ===""){
+    profileNameShow.innerHTML ="you name";
+  }else{
+  profileNameShow.innerHTML = updateText;
+  }
+});
+// profile pic 
+var profilePic = document.querySelector(".profilePic")
+var profilePicShow = document.querySelector(".profilePic-show")
+profilePic.addEventListener("change", () => {
+  if(profilePic.files.length > 0) {
+    var file = profilePic.files[0];
+    var reader = new FileReader();
+    reader.onload = (event) => {
+      profilePicShow.src = event.target.result;
+      profilePicShow.style.display ="block";
+    }
+    reader.readAsDataURL(file);
+    }
+});
+// desigination 
+var desigination = document.querySelector(".desigination");
+var desiginationShow = document.querySelector(".desigination-show");
+desigination.addEventListener("input", () => {
+  var updateText = desigination.value;
+  if(updateText ===""){
+    desiginationShow.innerHTML ="desigination";
+  }else{
+    desiginationShow.innerHTML = updateText;
+  }
+})
+// company 
+var company = document.querySelector(".company-name");
+var companyShow = document.querySelector(".company-name-show");
+company.addEventListener("input", () => {
+  var updateText = company.value;
+  if(updateText ===""){
+    companyShow.innerHTML ="company";
+  }else{
+    companyShow.innerHTML = updateText;
+  }
+})
+// bio 
+var bio = document.querySelector(".bio");
+var bioShow = document.querySelector(".bio-show");
+bio.addEventListener("input", () => {
+  var updateText = bio.value;
+  if(updateText ===""){
+    bioShow.innerHTML ="about your self 100 word";
+  }else{
+    bioShow.innerHTML = updateText;
+  }
+})
