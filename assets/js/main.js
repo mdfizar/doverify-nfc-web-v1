@@ -238,66 +238,72 @@ companyName.addEventListener("input", () => {
          console.log("No files selected.");
      }
  });
-//  theme selection
-  var themeOne = document.querySelector(".theme1");
-  var themeTwo = document.querySelector(".theme2")
-  var themeMenu = document.querySelector(".theme-menu");
 
-//  theme customize 
-var profileName = document.querySelector(".profile-name");
-var profileNameShow = document.querySelector(".profile-name-show");
-profileName.addEventListener("input", () => {
-  var updateText = profileName.value;
-  if(updateText ===""){
-    profileNameShow.innerHTML ="you name";
-  }else{
-  profileNameShow.innerHTML = updateText;
+// handle theme selection 
+const themeSelector = document.querySelector(".themeSelector");
+const nameInput = document.querySelector(".name-input");
+const profilePicInput = document.querySelector(".profilepic-input");
+const desiginationInput = document.querySelector(".desigination-input");
+console.log(desiginationInput)
+
+function updateTheme() {
+  const selectedTheme = themeSelector.value;
+
+  // hide all theme 
+  const themes = document.querySelectorAll(".theme")
+  themes.forEach(theme => {
+    theme.classList.remove("showtheme");
+  });
+  
+  // show selected theme 
+  const activeTheme = document.querySelector("." + selectedTheme);
+  if(activeTheme) {
+    activeTheme.classList.add("showtheme");
   }
-});
-// profile pic 
-var profilePic = document.querySelector(".profilePic")
-var profilePicShow = document.querySelector(".profilePic-show")
-profilePic.addEventListener("change", () => {
-  if(profilePic.files.length > 0) {
-    var file = profilePic.files[0];
-    var reader = new FileReader();
-    reader.onload = (event) => {
-      profilePicShow.src = event.target.result;
-      profilePicShow.style.display ="block";
+};
+
+function updateContent() {
+  const activeTheme = document.querySelector(".theme.showtheme");
+  if(activeTheme) {
+    // name 
+    const name = activeTheme.querySelector(".profile-name");
+    if(name) {
+      name.textContent = nameInput.value || name.dataset.default;
     }
-    reader.readAsDataURL(file);
+    // desigination 
+    const desigination = activeTheme.querySelector(".desiginatoin");
+    if(desigination) {
+      desigination.textContent = desiginationInput.value || desigination.dataset.default;
     }
+  }
+};
+
+// update text for the new theme 
+themeSelector.addEventListener('change',function() {
+  updateTheme();
+  updateContent();
 });
-// desigination 
-var desigination = document.querySelector(".desigination");
-var desiginationShow = document.querySelector(".desigination-show");
-desigination.addEventListener("input", () => {
-  var updateText = desigination.value;
-  if(updateText ===""){
-    desiginationShow.innerHTML ="desigination";
-  }else{
-    desiginationShow.innerHTML = updateText;
+
+// catch the update Name 
+nameInput.addEventListener('input', updateContent);
+// catch the update desigination 
+desiginationInput.addEventListener('input', updateContent);
+
+// initialize the default content
+const themeContainer = document.querySelector(".theme-container"); 
+themeContainer.querySelectorAll(".theme").forEach(theme => {
+
+  // name 
+  const name = theme.querySelector(".profile-name");
+  if(name) {
+    name.dataset.default = name.textContent;
   }
-})
-// company 
-var company = document.querySelector(".company-name");
-var companyShow = document.querySelector(".company-name-show");
-company.addEventListener("input", () => {
-  var updateText = company.value;
-  if(updateText ===""){
-    companyShow.innerHTML ="company";
-  }else{
-    companyShow.innerHTML = updateText;
+  // desigination 
+  const desigination = theme.querySelector(".desigination");
+  if(desigination) {
+    desigination.dataset.default = desigination.textContent;
   }
-})
-// bio 
-var bio = document.querySelector(".bio");
-var bioShow = document.querySelector(".bio-show");
-bio.addEventListener("input", () => {
-  var updateText = bio.value;
-  if(updateText ===""){
-    bioShow.innerHTML ="about your self 100 word";
-  }else{
-    bioShow.innerHTML = updateText;
-  }
-})
+
+});
+
+themeSelector.dispatchEvent(new Event('change'));

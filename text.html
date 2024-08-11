@@ -3,72 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Splide Slider</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <title>Document</title>
     <style>
-        .splide__track {
-          width: 300px;
-          height: 400px;
-          overflow: hidden;
-          background: red;
+        .theme {
+            display: none; /* Hide all themes by default */
         }
-        .splide__list {
-            display: flex;
-            flex-direction: column; /* Stack slides vertically */
+        .theme1 {
+            background-color: lightblue;
+            color: darkblue;
         }
-        .splide__slide {
-          height: 2000px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .theme2 {
+            background-color: lightgreen;
+            color: darkgreen;
         }
-        .splide__arrows--ttb,
-         .splide__arrow--next {
-            display: none !important;
+        .theme3 {
+            background-color: lightcoral;
+            color: darkred;
+        }
+        .theme4 {
+            background-color: lightgoldenrodyellow;
+            color: darkorange;
+        }
+        .visible {
+            display: block; /* Only show the visible theme */
         }
     </style>
 </head>
 <body>
-    
-<div style="max-width: 500px; margin: auto;">
-    <section class="splide" aria-label="Vertical Splide Example">
-        <div class="splide__track">
-            <ul class="splide__list">
-                <li class="splide__slide">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum reprehenderit quaerat laboriosam nisi nulla nam unde. Accusamus, veritatis dicta inventore doloribus molestias ut vitae officiis maiores dolore! Obcaecati, tenetur quaerat.
-                    Ipsam explicabo molestias impedit temporibus consectetur quo culpa quis dolores nobis voluptatibus corrupti quibusdam tempore velit cupiditate ex consequatur, exercitationem dignissimos. Nostrum, veniam corporis earum provident voluptatum doloremque sint aperiam!
-                    Voluptatibus delectus voluptatem quo corrupti voluptates non veritatis, adipisci blanditiis harum consectetur quasi laborum qui quibusdam dicta inventore quis nesciunt beatae et placeat? Perferendis vitae, fugiat enim minus sunt dolorum.
-                    Neque eius sunt quas corrupti ad quasi ea officia maiores voluptas explicabo, qui, impedit blanditiis nisi beatae ipsum exercitationem reprehenderit iusto corporis commodi. Eveniet perferendis dolorum sit repellendus placeat ratione?
-                    Doloribus voluptatem numquam libero magnam maxime delectus tempora! Ex laboriosam facilis quaerat mollitia nemo quasi, officia quis totam enim assumenda ea quae exercitationem. Aspernatur tempora a nam iste totam at.
-                    Culpa dolore ea illo suscipit, modi rem possimus nesciunt tenetur autem? Dignissimos eligendi odio explicabo neque repudiandae fugiat maiores suscipit vel, ad velit vitae, iste, officia obcaecati natus fuga mollitia.
-                    Voluptatem magni excepturi aspernatur aliquam ratione nobis at officiis quasi autem sapiente, animi molestiae aut cum iure expedita cupiditate vel modi necessitatibus quo. Aut, eius deleniti dolorem labore veritatis in.
-                    Ea dolore similique temporibus exercitationem officiis nulla, quas dolorum minus culpa animi maxime a ad atque quis rem ducimus, consequatur labore fuga necessitatibus non sequi, quasi cupiditate dignissimos? Pariatur, et.
-                    Iure omnis quaerat officia totam? Beatae maiores labore natus consequatur architecto corporis sit facere dicta iure quaerat, atque soluta magnam adipisci distinctio. Ipsa ab eum iste nihil, dolorem assumenda vel.
-                    Consectetur commodi adipisci iure maiores iste alias sed natus laudantium itaque labore error atque eaque ullam impedit est ea iusto rerum minima, quidem harum. Quod facilis quia recusandae commodi neque.
-                </li>
-            </ul>
-        </div>
-    </section>
-</div>
+    <select name="" id="themeSelector">
+        <option value="theme1">theme1</option>
+        <option value="theme2">theme2</option>
+        <option value="theme3">theme3</option>
+        <option value="theme4">theme4</option>
+    </select>
+    <br><br>
+    <div class="theme theme1">
+        <h1>theme1</h1>
+        <p>Default content for theme1</p> <!-- Default paragraph content -->
+        <p class="name">your name</p>
+    </div>
+    <div class="theme theme2">
+        <h1>theme2</h1>
+        <p>Default content for theme2</p> <!-- Default paragraph content -->
+        <p class="name">your name</p>
+    </div>
+    <div class="theme theme3">
+        <h1>theme3</h1>
+        <p>Default content for theme3</p> <!-- Default paragraph content -->
+        <p class="name">your name</p>
+    </div>
+    <div class="theme theme4">
+        <h1>theme4</h1>
+        <p>Default content for theme4</p> <!-- Default paragraph content -->
+        <p class="name">your name</p>
+    </div>
+    <br><br>
+    <input class="text-input" type="text" placeholder="title">
+    <input class="name-input" ype="text" placeholder="your name">
 
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const splide = new Splide('.splide', {
-            type: 'loop',
-            height: 'fit-content',
-            perPage: 1,
-            focus  : 'center',
-            direction: 'ttb', 
-            autoScroll: {
-                speed: 1,
-            },
+    <script>
+        const themeSelector = document.getElementById('themeSelector');
+        const textInput = document.querySelector('.text-input');
+        const nameIput = document.querySelector(".name-input")
+
+        function updateTheme() {
+            const selectedTheme = themeSelector.value; // Get the selected theme
+            
+            const themes = document.querySelectorAll('.theme');
+            
+            themes.forEach(theme => {
+                theme.classList.remove('visible'); // Hide all themes
+            });
+
+            const activeTheme = document.querySelector('.' + selectedTheme);
+            if (activeTheme) {
+                activeTheme.classList.add('visible'); // Show the selected theme
+            }
+        }
+
+        function updateParagraphContent() {
+            const activeTheme = document.querySelector('.theme.visible');
+            if (activeTheme) {
+                const p = activeTheme.querySelector('p');
+                if (p) {
+                    p.textContent = textInput.value || p.dataset.default; // Update p text with input value or keep default
+                }
+                const name = activeTheme.querySelector(".name");
+                if(name) {
+                    name.textContent = nameIput.value || name.dataset.default;
+                }
+            }
+        }
+
+        themeSelector.addEventListener('change', function() {
+            updateTheme(); // Update theme visibility
+            updateParagraphContent(); // Update paragraph content for the new theme
         });
 
-        splide.mount(window.splide.Extensions);
-    });
-</script>
+        textInput.addEventListener('input', updateParagraphContent); // Update paragraph content as user types
+        nameIput.addEventListener('input', updateParagraphContent);
 
+        // Set default theme and initialize paragraph content
+        document.querySelectorAll('.theme').forEach(theme => {
+            const p = theme.querySelector('p');
+            if (p) {
+                p.dataset.default = p.textContent; // Store default content in a data attribute
+            }
+            const name = theme.querySelector(".name");
+            if(name) {
+                name.dataset.default = name.textContent;
+            }
+        });
+
+        themeSelector.dispatchEvent(new Event('change')); // Trigger default theme selection
+    </script>
 </body>
 </html>
