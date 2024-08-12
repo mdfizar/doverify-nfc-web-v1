@@ -1071,8 +1071,6 @@ header {
   background-color: rgb(241, 241, 241);
   z-index: 100;
   overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 .design-popup .card-color {
   width: 40px;
@@ -1260,6 +1258,14 @@ header {
   border-radius: 7px;
 
 }
+.popu-input-container textarea {
+  width: 100%;
+  padding: 10px 7px;
+  outline: none;
+  border: 1px solid rgb(166, 166, 166);
+  border-radius: 7px;
+  height: 250px;
+}
 .img-up-overlay {
   position: absolute;
   top: 0px;
@@ -1296,8 +1302,9 @@ header {
     display: block;
   }
 .profile-them {
+  padding: 10px;
   position: relative;
-  margin-top: 3rem;
+  border: 1px solid red;
 }
 /* them1 style  */
 /* ======== profile-1 ========== */
@@ -1823,31 +1830,18 @@ header {
   border: 1px solid gray;
   border-radius: 7px;
 }
-.sellect-container select:focus {
-  background-color: #000;
-  color: #fff;
-}
-
 .reseller-input-container input {
   width: 100%;
   padding: 15px 7px;
   outline: none;
   border: 1px solid gray;
   border-radius: 7px;
-  transition: all 0.7s ease-in-out;
-}
-.reseller-input-container input:focus {
-  background-color: #000;
-  color: #fff;
-}
-.reseller-input-container input:focus::placeholder {
-  color: #fff;
 }
 .rgister-btn input{
   padding: 15px 30px;
   outline: none;
-  border: 1px solid gray;
-  background-color: #000;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   color: #fff;
   border-radius: 7px;
   font-weight: 700;

@@ -244,7 +244,8 @@ const themeSelector = document.querySelector(".themeSelector");
 const nameInput = document.querySelector(".name-input");
 const profilePicInput = document.querySelector(".profilepic-input");
 const desiginationInput = document.querySelector(".desigination-input");
-console.log(desiginationInput)
+const compnayNameInput = document.querySelector(".companyname-input");
+const aboutInput = document.querySelector(".about-input");
 
 function updateTheme() {
   const selectedTheme = themeSelector.value;
@@ -268,12 +269,35 @@ function updateContent() {
     // name 
     const name = activeTheme.querySelector(".profile-name");
     if(name) {
-      name.textContent = nameInput.value || name.dataset.default;
+      name.textContent = nameInput.value || "your name";
     }
+    // profilepic 
+    const profilepic = activeTheme.querySelector(".profilePic");
+    if(profilepic) {
+      if (profilePicInput.files.length > 0) {
+        const file = profilePicInput.files[0];
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          var selectedImg = event.target.result;
+          profilepic.src = selectedImg;
+        };
+        reader.readAsDataURL(file);
+      }   
+     };
     // desigination 
     const desigination = activeTheme.querySelector(".desiginatoin");
     if(desigination) {
-      desigination.textContent = desiginationInput.value || desigination.dataset.default;
+      desigination.textContent = desiginationInput.value||desigination.dataset.default;
+    }
+    // company name 
+    const company = activeTheme.querySelector(".company-name");
+    if(company) {
+      company.textContent = compnayNameInput.value || "compnay";
+    }
+    // about 
+    const about = activeTheme.querySelector(".about");
+    if(about) {
+      about.textContent = aboutInput.value || "about your self";
     }
   }
 };
@@ -284,26 +308,11 @@ themeSelector.addEventListener('change',function() {
   updateContent();
 });
 
-// catch the update Name 
-nameInput.addEventListener('input', updateContent);
-// catch the update desigination 
+// catch the update content  
+nameInput.addEventListener('input', updateContent); 
+profilePicInput.addEventListener('change', updateContent)
 desiginationInput.addEventListener('input', updateContent);
-
-// initialize the default content
-const themeContainer = document.querySelector(".theme-container"); 
-themeContainer.querySelectorAll(".theme").forEach(theme => {
-
-  // name 
-  const name = theme.querySelector(".profile-name");
-  if(name) {
-    name.dataset.default = name.textContent;
-  }
-  // desigination 
-  const desigination = theme.querySelector(".desigination");
-  if(desigination) {
-    desigination.dataset.default = desigination.textContent;
-  }
-
-});
+compnayNameInput.addEventListener('input', updateContent);
+aboutInput.addEventListener('input', updateContent);
 
 themeSelector.dispatchEvent(new Event('change'));

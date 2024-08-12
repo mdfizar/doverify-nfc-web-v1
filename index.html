@@ -1004,17 +1004,17 @@
                     </div>
                 </div>
                 <p class="error text-center mt-2" style="display: none;">Please select the the font color</p>
+                <!-- theme selection  -->
+                <div class="m-auto mt-5 mb-4" style="width: 380px;">
+                  <h5 class="w-100 text-center">Choose theme</h5>
+                  <select class="form-select themeSelector" aria-label="Default select example">
+                    <option value="theme1">Basic</option>
+                    <option value="theme2">Standard</option>
+                    <option value="theme3">Pro</option>
+                  </select>
+                </div>
                 <!--begin profile  -->
                 <div class="profile-them">
-                  <!-- theme selection  -->
-                  <div class="m-auto" style="width: 380px;">
-                    <label for="">Choose yourtheme</label>
-                    <select class="form-select themeSelector mb-4" aria-label="Default select example">
-                      <option value="theme1">Basic</option>
-                      <option value="theme2">Standard</option>
-                      <option value="theme3">Pro</option>
-                    </select>
-                  </div>
                   <!-- begin theme container  -->
                    <div class="theme-container">
                     <!-- begin theme 1 -->
@@ -1026,7 +1026,7 @@
                         <div class="company-logo mt-4 p-3 h-100">
                           <div class="profile-pic">
                             <div class="position-relative">
-                              <img class="w-100" src="https://www.lse.ac.uk/international-relations/assets/images/people-pages/callahan/callahan-william-2018-300x300.jpg" alt="nfc profile picture">
+                              <img class="w-100 profilePic" src="https://www.lse.ac.uk/international-relations/assets/images/people-pages/callahan/callahan-william-2018-300x300.jpg" alt="nfc profile picture">
                               <button class="share">
                                 <i class="fa-solid fa-share-nodes"></i>
                               </button>
@@ -1034,25 +1034,15 @@
                           </div>
                           <h3 class="text-center pt-4 mb-2 fw-normal profile-name">Md: Mostafizar rahman</h3>
                           <p class="text-center mb-2 desiginatoin">Lorem ipsum.</p>
-                          <p class="text-center">Lorem, ipsum dolor.lorem Lorem ipsum dolor sit amet.</p>
+                          <p class="text-center company-name">Lorem, ipsum dolor.lorem Lorem ipsum dolor sit amet.</p>
                       </div>
                       <div class="company-logo p-3 my-3 h-100">
                         <strong>About</strong><br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vero quia nesciunt architecto soluta reprehenderit alias est tenetur ipsum tempore?
+                        <span class="about">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vero quia nesciunt architecto soluta reprehenderit alias est tenetur ipsum tempore?
+                        </span>
                       </div>
                       <div class="contact-container">
-                        <a class="contact-info nav-link" href="#">
-                          <span><i class="fa-solid fa-envelope"></i></span>
-                          <p>Email</p>
-                        </a>
-                        <a class="contact-info nav-link" href="#">
-                          <span><i class="fa-solid fa-phone"></i></span>
-                          <p>Phone</p>
-                        </a>
-                        <a class="contact-info nav-link" href="#">
-                          <span><i class="fa-solid fa-globe"></i></span>
-                          <p>Website</p>
-                        </a>
                         <a class="contact-info nav-link" href="#">
                           <span><i class="fa-solid fa-envelope"></i></span>
                           <p>Email</p>
@@ -1110,10 +1100,10 @@
                               <div class="ps-3 name pt-5">
                                   <p class="mb-1 fw-bold fs-4 profile-name">Jhon Robert</p>
                                   <p class="mb-1 fs-6 desiginatoin">Trainer</p>
-                                  <p class="mb-1 fs-5 fw-medium company-name-show">Soft Solvency</p>
+                                  <p class="mb-1 fs-5 fw-medium company-name">Soft Solvency</p>
                               </div>
                           </div>
-                          <img class="profile-pic profilePic-show" src="https://www.rabotti.it/images/testimonial-img-2.jpg" alt="nfc profile picture">
+                          <img class="profile-pic profilePic" src="https://www.rabotti.it/images/testimonial-img-2.jpg" alt="nfc profile picture">
                           <div class="contact d-flex">
                               <a class="nav-link connect" href="#"><i class="fa-solid fa-phone"></i></a>
                               <a class="nav-link connect" href="#"><i class="fa-solid fa-envelope"></i></a>
@@ -1121,7 +1111,7 @@
                           </div>
                           <div class="about p-3">
                               <strong>About</strong><br>
-                              <span class="bio-show">
+                              <span class="about">
                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur quod id ea hic, soluta ut consequuntur sapiente alias aliquid?
                               </span>
                           </div>
@@ -1159,18 +1149,18 @@
                     <div class="theme theme3">
                       <div class="profile-container">
                         <div class="logo d-flex align-items-center justify-content-between">
-                            <img  src="img/logo.png" alt="nfc logo">
-                            <img src="img/logo.png" alt="company">
+                            <img  src="assets/img/logo.png" alt="nfc logo">
+                            <img src="assets/img/logo.png" alt="company">
                         </div>
                         <div class="img-container">
-                            <img class="w-100" src="img/mdfizar008645@gmail.com.jpg" alt="">
+                            <img class="w-100 profilePic" src="https://www.lse.ac.uk/international-relations/assets/images/people-pages/callahan/callahan-william-2018-300x300.jpg" alt="">
                         </div>
                         <p class="text-center fs-5 mb-1 fw-normal profile-name">
                             Mostafizar Rahman <br>
                             <hr class="underline">
                         </p>
                         <p class="text-center mb-2 fw-bold desiginatoin">It Head</p>
-                        <p class="text-center mb-2">Akkar It</p>
+                        <p class="text-center mb-2 company-name">Akkar It</p>
                         <div class="socal-icon d-flex gap-3 justify-content-center mb-2">
                             <a class="nav-link" href="#"><i class="fa-solid fa-envelope"></i></a>
                             <a class="nav-link" href="#"><i class="fa-solid fa-phone"></i></a>
@@ -1181,7 +1171,9 @@
                         <div class="about-section p-3">
                             <div class="content">
                                 <strong>About me</strong><br>
+                               <span class="about">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore ducimus possimus saepe vitae animi maxime facilis iure sit inventore, debitis, autem aliquam nihil impedit quibusdam, dignissimos nisi sapiente repellat?
+                               </span>
                             </div>
                             <div class="about-bg"></div>
                         </div>
@@ -1211,20 +1203,20 @@
                             
                            <div class=" gallary-section">
                             <div class="img img-1">
-                                <img class="w-100" src="img/mdfizar008645@gmail.com.jpg" alt="nfc gallary picture">
+                                <img class="w-100" src="https://www.lse.ac.uk/international-relations/assets/images/people-pages/callahan/callahan-william-2018-300x300.jpg" alt="nfc gallary picture">
                             </div>
                             <div class="img img-2">
-                                <img class="w-100" src="img/mdfizar008645@gmail.com.jpg" alt="nfc gallary picture">
+                                <img class="w-100" src="https://www.lse.ac.uk/international-relations/assets/images/people-pages/callahan/callahan-william-2018-300x300.jpg" alt="nfc gallary picture">
                             </div>
                             <div class="img img-3">
-                                <img class="w-100" src="img/mdfizar008645@gmail.com.jpg" alt="nfc gallary picture">
+                                <img class="w-100" src="https://www.lse.ac.uk/international-relations/assets/images/people-pages/callahan/callahan-william-2018-300x300.jpg" alt="nfc gallary picture">
                             </div>
                             <div class="img img-4">
-                                <img class="w-100" src="img/mdfizar008645@gmail.com.jpg" alt="nfc gallary picture">
-                                <img style="margin-top: 6px;" class="w-100" src="img/mdfizar008645@gmail.com.jpg" alt="nfc gallary picture">
+                                <img class="w-100" src="https://www.lse.ac.uk/international-relations/assets/images/people-pages/callahan/callahan-william-2018-300x300.jpg" alt="nfc gallary picture">
+                                <img style="margin-top: 6px;" class="w-100" src="https://www.lse.ac.uk/international-relations/assets/images/people-pages/callahan/callahan-william-2018-300x300.jpg" alt="nfc gallary picture">
                             </div>
                             <div class="img img-5">
-                                <img class="w-100" src="img/mdfizar008645@gmail.com.jpg" alt="nfc gallary picture">
+                                <img class="w-100" src="https://www.lse.ac.uk/international-relations/assets/images/people-pages/callahan/callahan-william-2018-300x300.jpg" alt="nfc gallary picture">
                             </div>
                            </div>
                         </div>
@@ -1309,8 +1301,8 @@
                       <input class="profilepic-input" type="file"><br><br>
                       <input class="desigination-input" type="text" placeholder="desigination">
                       <br><br>
-                      <input class="company-name" type="text" placeholder="company name"><br><br>
-                      <textarea class="bio" name="" id="" placeholder="about your self"></textarea>
+                      <input class="companyname-input" type="text" placeholder="company name"><br><br>
+                      <textarea class="about-input w-100" name="" id="" placeholder="about your self"></textarea>
                   </div>
                   <input class="mt-5 card-dt-sub border-0" type="submit" value="Add to Card">
                 </form>
