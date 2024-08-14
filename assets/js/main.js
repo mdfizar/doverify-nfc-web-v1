@@ -243,6 +243,7 @@ companyName.addEventListener("input", () => {
 const themeSelector = document.querySelector(".themeSelector");
 const nameInput = document.querySelector(".name-input");
 const profilePicInput = document.querySelector(".profilepic-input");
+const companyLogo = document.querySelector(".company-logo-input");
 const desiginationInput = document.querySelector(".desigination-input");
 const compnayNameInput = document.querySelector(".companyname-input");
 const aboutInput = document.querySelector(".about-input");
@@ -284,10 +285,22 @@ function updateContent() {
         reader.readAsDataURL(file);
       }   
      };
+    //  company logo 
+    const companyLogoshow = activeTheme.querySelector(".companyLogo");
+    if(companyLogoshow) {
+      if(companyLogo.files.length > 0) {
+        const file = companyLogo.files[0];
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          companyLogoshow.src = event.target.result;
+        }
+        reader.readAsDataURL(file);
+      }
+    };
     // desigination 
     const desigination = activeTheme.querySelector(".desiginatoin");
     if(desigination) {
-      desigination.textContent = desiginationInput.value||desigination.dataset.default;
+      desigination.textContent = desiginationInput.value|| "desigionation";
     }
     // company name 
     const company = activeTheme.querySelector(".company-name");
@@ -311,6 +324,7 @@ themeSelector.addEventListener('change',function() {
 // catch the update content  
 nameInput.addEventListener('input', updateContent); 
 profilePicInput.addEventListener('change', updateContent)
+companyLogo.addEventListener('change', updateContent)
 desiginationInput.addEventListener('input', updateContent);
 compnayNameInput.addEventListener('input', updateContent);
 aboutInput.addEventListener('input', updateContent);

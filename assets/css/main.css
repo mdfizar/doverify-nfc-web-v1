@@ -1289,6 +1289,9 @@ header {
   color: white;
 }
 /* begin theme section  */
+.themeSelector {
+  padding: 10px 7px;
+}
 .themeSelector:focus {
   border-color: rgb(191, 187, 187);
   box-shadow: none;
@@ -1304,12 +1307,12 @@ header {
 .profile-them {
   padding: 10px;
   position: relative;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 /* them1 style  */
 /* ======== profile-1 ========== */
 .profile2-container {
-  width: 380px;
+  max-width: 380px;
   padding-bottom: 80px;
   margin: 0px auto;
 }
@@ -1439,10 +1442,10 @@ header {
 }
 /* theme8 style  */
 .profile-container-8 {
-  width: 380px;
+  max-width: 380px;
   margin: auto;
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 55px;
 }
 .profile-container-8 .profile {
   width: 100%;
@@ -1512,27 +1515,46 @@ header {
   transition: all 0.4s ease-in-out;
 
 }
-.profile-container-8 .save-contact {
+.profile-container-8 .save-container {
   position: absolute;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  width: 345px;
+  padding: 7px 10px;
+  background: #000000;
+  color: #fff;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 5px;
- 
-}
-.profile-container-8 .save-contact button {
-  padding: 5px 10px;
-  border: 1px solid gray;
-  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  animation: save-container 2s alternate-reverse infinite;
+}
+.profile-container-8 .left span a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ef864d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+}
+.profile-container-8 .save-container .right p {
+  width: 75px;
+}
+.profile-container-8 .save-container .right span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ef864d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
 }
 /* ======= profile-3 ============ */
 .profile-container {
-  width: 380px;
+  /* width: 380px; */
   padding-bottom: 65px;
   margin: auto;
   color: #424242;
